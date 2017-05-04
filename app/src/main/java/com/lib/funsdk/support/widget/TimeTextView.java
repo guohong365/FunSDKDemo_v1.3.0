@@ -1,21 +1,21 @@
 package com.lib.funsdk.support.widget;
 
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.TextView;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.TextView;
-
 /**
  * 
  * @ClassName: TimeTextView
  * @Description: TODO(æ˜¾ç¤ºæ—¶é—´çš„TextView)
  * @author hws
- * @date 2015å¹?11æœ?26æ—? ä¸‹åˆ1:07:39
+
  * 
  */
 public class TimeTextView extends TextView {
@@ -53,7 +53,7 @@ public class TimeTextView extends TextView {
 	/**
 	 * 
 	 * @Title: onStartTimer
-	 * @Description: TODO(å¼?å§‹æ—¶é’?)
+	 * @Description: TODO(ï¿½)
 	 */
 	public void onStartTimer() {
 		synchronized (mLock) {
