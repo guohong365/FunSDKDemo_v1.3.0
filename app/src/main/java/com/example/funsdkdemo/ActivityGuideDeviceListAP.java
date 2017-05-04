@@ -1,9 +1,6 @@
 package com.example.funsdkdemo;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Intent;
 import android.net.NetworkInfo.State;
 import android.os.Bundle;
@@ -22,6 +19,9 @@ import com.lib.funsdk.support.models.FunDevice;
 import com.lib.funsdk.support.models.FunLoginType;
 import com.lib.funsdk.support.utils.APAutomaticSwitch;
 import com.lib.funsdk.support.utils.WifiStateListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Demo: 显示附近的打开WiFi热点的设备列表
@@ -56,7 +56,8 @@ public class ActivityGuideDeviceListAP extends ActivityDemo implements OnClickLi
 		mTextTitle.setText(R.string.device_list_nearby);
 		
 		mBtnBack = (ImageButton)findViewById(R.id.backBtnInTopLayout);
-		mBtnBack.setOnClickListener(this);
+		mBtnBack.setVisibility(View.GONE);
+		//mBtnBack.setOnClickListener(this);
 		
 		View layoutRefresh = setNavagateRightButton(R.layout.imagebutton_refresh);
 		mBtnRefresh = (ImageButton)layoutRefresh.findViewById(R.id.btnRefresh);

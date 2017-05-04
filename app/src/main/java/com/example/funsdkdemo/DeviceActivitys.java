@@ -1,16 +1,16 @@
 package com.example.funsdkdemo;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 import android.content.Intent;
 
 import com.example.funsdkdemo.devices.ActivityGuideDeviceBulb;
-import com.example.funsdkdemo.devices.ActivityGuideDeviceSocket;
 import com.example.funsdkdemo.devices.ActivityGuideDeviceCamera;
+import com.example.funsdkdemo.devices.ActivityGuideDeviceSocket;
 import com.lib.funsdk.support.models.FunDevType;
 import com.lib.funsdk.support.models.FunDevice;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DeviceActivitys {
 
@@ -52,6 +52,10 @@ public class DeviceActivitys {
 		// 运动相机
 		sDeviceActivityMap.put(FunDevType.EE_DEV_SPORTCAMERA,
 				ActivityGuideDeviceCamera.class);
+
+		//小黄人
+		sDeviceActivityMap.put(FunDevType.EE_DEV_MINIONS, ActivityGuideDeviceCamera.class);
+
 	}
 	
 	public static void startDeviceActivity(Context context, FunDevice funDevice) {

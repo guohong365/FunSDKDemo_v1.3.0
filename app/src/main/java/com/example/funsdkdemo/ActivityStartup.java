@@ -103,9 +103,10 @@ public class ActivityStartup extends Activity implements OnFunLoginListener {
 		if ( mLoginHasFinished && mWaitTimeout ) {
 			Intent intent = new Intent();
 			
-			intent.setClass(this, ActivityGuideMain.class);
+			//intent.setClass(this, ActivityGuideMain.class);
+			intent.setClass(this, ActivityGuideDeviceListAP.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			
+			intent.putExtra("CAN_BACK", false);
 			startActivity(intent);
 			
 			finish();
