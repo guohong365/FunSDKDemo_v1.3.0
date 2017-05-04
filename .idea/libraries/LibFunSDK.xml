@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LibFunSDK">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/LibFunSDK.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
