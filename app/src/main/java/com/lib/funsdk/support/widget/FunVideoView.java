@@ -1,10 +1,16 @@
 package com.lib.funsdk.support.widget;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.json.JSONObject;
+import android.content.Context;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaPlayer.OnErrorListener;
+import android.media.MediaPlayer.OnInfoListener;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.opengl.GLSurfaceView;
+import android.os.Message;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
 
 import com.basic.G;
 import com.lib.EFUN_ATTR;
@@ -28,17 +34,11 @@ import com.video.opengl.GLSurfaceView20;
 import com.xmgl.vrsoft.VRSoftDefine.XMVRType;
 import com.xmgl.vrsoft.VRSoftGLView;
 
-import android.content.Context;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-import android.media.MediaPlayer.OnErrorListener;
-import android.media.MediaPlayer.OnInfoListener;
-import android.media.MediaPlayer.OnPreparedListener;
-import android.opengl.GLSurfaceView;
-import android.os.Message;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
-import android.widget.LinearLayout;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 //import com.android.gl2jni.GL2JNIView;
 
@@ -773,7 +773,6 @@ public class FunVideoView extends LinearLayout implements IFunSDKResult {
 		case EUIMSG.SAVE_IMAGE_FILE:
 			{
 				FunLog.i(TAG, "EUIMSG.SAVE_IMAGE_FILE"); //截图保存成功后回调
-
 			}
 			break;
         case EUIMSG.START_SAVE_MEDIA_FILE:

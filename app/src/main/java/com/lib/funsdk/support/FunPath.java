@@ -1,11 +1,6 @@
 package com.lib.funsdk.support;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.content.Context;
-import android.os.Build;
 import android.os.Environment;
 import android.text.TextUtils;
 
@@ -14,6 +9,10 @@ import com.lib.funsdk.support.utils.FileDataUtils;
 import com.lib.funsdk.support.utils.StringUtils;
 import com.lib.sdk.struct.H264_DVR_FILE_DATA;
 import com.lib.sdk.struct.SDK_SYSTEM_TIME;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class FunPath {
@@ -283,7 +282,7 @@ public class FunPath {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String strDate = sdf.format(new Date());
         strDate = strDate + System.currentTimeMillis();
-        return FunPath.PATH_CAPTURE_TEMP + File.separator + strDate + ".jpg";
+        return FunPath.PATH_PHOTO + File.separator + strDate + ".jpg";
 	}
 
     public static String getTempPicPath(){

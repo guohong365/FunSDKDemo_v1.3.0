@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.funsdkdemo"
     android:versionCode="129"
-    android:versionName="1.2.9" >
+    android:versionName="1.2.9">
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -23,8 +23,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 如果您想获得客户端crash的报告, 需要添加这个权限 -->
     <uses-permission android:name="android.permission.READ_LOGS" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
@@ -36,17 +38,18 @@
     <!-- 如果您使用了友盟自动更新提醒功能，需添加这个权限，为了将更新的APK临时存在SD卡里 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.example.funsdkdemo.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo_app"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.funsdkdemo.ActivityStartup"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
+            android:name=".ActivityStartup"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,329 +57,280 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideMain"
+            android:name=".ActivityGuideMain"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUser">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUserLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUserRegister">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUserChangePassw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUserDebug">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDevice"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDeviceList"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDeviceListAP"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDeviceListLan"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDeviceSNLogin"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityGuideDeviceAddByUser"
             android:screenOrientation="portrait"
-            >
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideUser"
-            >
+            android:name=".ActivityGuideDeviceWifiConfig"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideUserLogin"
-            >
+            android:name=".devices.ActivityGuideDeviceCamera"
+            android:configChanges="orientation|keyboardHidden|screenLayout|keyboard|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideUserRegister"
-            >
+            android:name=".devices.ActivityGuideDeviceSocket"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideUserChangePassw"
-            >
+            android:name=".devices.ActivityGuideDeviceBulb"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideUserDebug"
-            >
+            android:name=".devices.ActivityGuideDevicePictureList"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDevice"
+            android:name=".devices.ActivityGuideDeviceAlarmResult"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceSetupEncode"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceSetupAlarm"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceSetupRecord"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceSetupCamera"
             android:screenOrientation="portrait"
-            >
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceList"
+            android:name=".devices.ActivityGuideDeviceSetupExpert"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceSetupStorage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".devices.ActivityGuideDeviceChangePassw"
             android:screenOrientation="portrait"
-            >
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceListAP"
+            android:name=".devices.ActivityGuideDeviceTransCom"
             android:screenOrientation="portrait"
-            >
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceListLan"
+            android:name=".devices.ActivityGuideDeviceLanAlarm"
             android:screenOrientation="portrait"
-            >
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceSNLogin"
-            android:screenOrientation="portrait"
-            >
+            android:name=".devices.ActivityGuideDeviceSetup"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceAddByUser"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            >
+            android:name=".devices.ActivityGuideDevicePreview"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.ActivityGuideDeviceWifiConfig"
-            android:screenOrientation="portrait"
-            >
+            android:name=".devices.ActivityGuideDeviceSetupAlarmCenter"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceCamera"
-            android:configChanges="orientation|keyboardHidden|screenLayout|keyboard|screenSize"
-            >
+            android:name=".devices.ActivityGuideDeviceSystemInfo"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSocket"
-            android:screenOrientation="portrait"
-            >
+            android:name=".devices.ActivityGuideDeviceSystemFunction"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityGuideMedia">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideTranscode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityAbout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityGuideUserInfo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".devices.ActivityGuideMediaRealPlay"></activity>
+        <activity android:name=".ActivityGuideUserForgetPassw" />
+        <activity android:name=".devices.ActivityGuideDeviceNormalPic" />
+        <activity android:name=".devices.ActivityGuideDevicePicBrowser" />
+        <activity android:name=".devices.ActivityGuideDeviceSportPicList" />
         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceBulb"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+            android:name=".devices.ActivityGuideDeviceRecordList"
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDevicePictureList"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceAlarmResult"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity 
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupEncode"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupAlarm"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupRecord"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupCamera"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupExpert"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupStorage"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceChangePassw"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceTransCom"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceLanAlarm"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetup"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDevicePreview"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-         <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupAlarmCenter"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSystemInfo"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSystemFunction"
-            android:screenOrientation="portrait"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.ActivityGuideMedia"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.ActivityGuideTranscode"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.ActivityAbout" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.funsdkdemo.ActivityGuideUserInfo">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.funsdkdemo.devices.ActivityGuideMediaRealPlay">
-            </activity>
+            android:name="com.zbar.lib.CaptureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".devices.ActivityGuideDevicesSocketSetTask"></activity>
+        <activity android:name=".devices.ActivityGuideDeviceSocketSetting" />
+        <activity android:name=".devices.ActivityGuideDevicesSocketAboutWork" />
+        <activity android:name=".devices.ActivityGuideDeviceSetupJson" />
+        <activity android:name=".devices.ActivityGuideDevicesSettingStatusLed" />
+        <activity android:name=".devices.ActivityGuideDevicesSocketSensitiveSetting" />
+        <activity android:name=".devices.ActivityDeviceFishEyeInfo">
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".ActivityGuideUserForgetPassw"/>
-        <activity android:name=".devices.ActivityGuideDeviceNormalPic"/>
-        <activity android:name=".devices.ActivityGuideDevicePicBrowser"/>
-        <activity android:name=".devices.ActivityGuideDeviceSportPicList"/>
-        <activity android:name=".devices.ActivityGuideDeviceRecordList"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity android:name="com.zbar.lib.CaptureActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.example.funsdkdemo.devices.ActivityGuideDevicesSocketSetTask" >
-        </activity>
-        <activity android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSocketSetting"></activity>
-	<activity android:name="com.example.funsdkdemo.devices.ActivityGuideDevicesSocketAboutWork"></activity>
-	<activity android:name="com.example.funsdkdemo.devices.ActivityGuideDeviceSetupJson"></activity>
-	<activity android:name="com.example.funsdkdemo.devices.ActivityGuideDevicesSettingStatusLed"></activity>
-        <activity android:name="com.example.funsdkdemo.devices.ActivityGuideDevicesSocketSensitiveSetting"></activity>
-        
-        <activity android:name="com.example.funsdkdemo.devices.ActivityDeviceFishEyeInfo">
-            android:screenOrientation="portrait">
-        </activity>
-        
-        
-        <service android:name="com.example.funsdkdemo.ServiceGuidePushAlarmNotification">
+        <service android:name=".ServiceGuidePushAlarmNotification">
             <intent-filter>
-                <action android:name="com.example.funsdkdemo.ServiceGuidePushAlarmNotification" >
-                </action>
+                <action android:name="com.example.funsdkdemo.ServiceGuidePushAlarmNotification"></action>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </service>
-        
-        <service android:name="com.example.funsdkdemo.ServiceGuideLanAlarmNotification">
+        <service android:name=".ServiceGuideLanAlarmNotification">
             <intent-filter>
-                <action android:name="com.example.funsdkdemo.ServiceGuideLanAlarmNotification" >
-                </action>
+                <action android:name="com.example.funsdkdemo.ServiceGuideLanAlarmNotification"></action>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".ActivityPictureList"
+            android:label="@string/title_activity_picture_list"></activity>
     </application>
 
 </manifest>

@@ -70,14 +70,12 @@ public class ActivityStartup extends Activity implements OnFunLoginListener {
 			case MESSAGE_ENTER_MAINMENU:
 				{
 					mWaitTimeout = true;
-					
 					enterSDKGuide();
 				}
 				break;
 			case MESSAGE_LOGIN_FUNISHED:
 				{
 					mLoginHasFinished = true;
-					
 					enterSDKGuide();
 				}
 				break;

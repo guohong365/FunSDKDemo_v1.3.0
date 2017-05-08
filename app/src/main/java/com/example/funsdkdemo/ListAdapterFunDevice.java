@@ -203,7 +203,7 @@ public class ListAdapterFunDevice extends BaseExpandableListAdapter {
 			} else {
 				holder.btnConnect.setVisibility(View.GONE);
 			}
-			
+
 			convertView.setTag(holder);
 		} else {
 			holder = (ChildViewHolder) convertView.getTag();
@@ -235,7 +235,7 @@ public class ListAdapterFunDevice extends BaseExpandableListAdapter {
 		} else {
 			holder.btnAlarm.setVisibility(View.GONE);
 		}
-		
+		holder.btnTransCom.setVisibility(View.GONE);
 		return convertView;
 	}
 

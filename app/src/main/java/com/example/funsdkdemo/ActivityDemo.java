@@ -1,17 +1,17 @@
 package com.example.funsdkdemo;
 
-import java.util.Arrays;
-import java.util.List;
-
-import com.example.common.DialogWaitting;
-import com.example.common.UIFactory;
-
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.example.common.DialogWaitting;
+import com.example.common.UIFactory;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class ActivityDemo extends FragmentActivity {
 	private DialogWaitting mWaitDialog = null;
@@ -94,10 +94,10 @@ public class ActivityDemo extends FragmentActivity {
 			}
 			
 			mNavRightView = LayoutInflater.from(this).inflate(resource, null);
-			RelativeLayout.LayoutParams lp = null;
+			RelativeLayout.LayoutParams lp;
 			
-			int lpWidth = 0;
-			int lpHeight = 0;
+			int lpWidth;
+			int lpHeight;
 			if ( witdhOfDP > 0 ) {
 				lpWidth = UIFactory.dip2px(this, witdhOfDP);
 			} else {
@@ -110,8 +110,7 @@ public class ActivityDemo extends FragmentActivity {
 				lpHeight = heightOfDP;
 			}
 			
-			lp = new RelativeLayout.LayoutParams(
-					lpWidth, lpHeight);
+			lp = new RelativeLayout.LayoutParams(lpWidth, lpHeight);
 			
 			lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 			lp.addRule(RelativeLayout.CENTER_VERTICAL);
